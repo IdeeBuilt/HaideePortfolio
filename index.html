@@ -1,361 +1,1128 @@
-<?xml version="1.0" encoding="utf-8"?>
-<configuration>
-  <configSections>
-    <!-- For more information on Entity Framework configuration, visit http://go.microsoft.com/fwlink/?LinkID=237468 -->
-    <section name="entityFramework" type="System.Data.Entity.Internal.ConfigFile.EntityFrameworkSection, EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" requirePermission="false" />
-  </configSections>
-  <startup>
-    <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.6.1" />
-  </startup>
-  <connectionStrings>
-    <add name="DbConnection" connectionString="Data Source=203.177.202.72;initial catalog=QX;persist security info=True;user 	id=qxuser;password=wZ4655WGf4DdDY;MultipleActiveResultSets=True;application name=QX" providerName="System.Data.SqlClient" />
-  </connectionStrings>
-  <entityFramework>
-    <defaultConnectionFactory type="System.Data.Entity.Infrastructure.SqlConnectionFactory, EntityFramework" />
-    <providers>
-      <provider invariantName="System.Data.SqlClient" type="System.Data.Entity.SqlServer.SqlProviderServices, EntityFramework.SqlServer" />
-    </providers>
-  </entityFramework>
-  <runtime>
-    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
-      <dependentAssembly>
-        <assemblyIdentity name="System.Runtime.CompilerServices.Unsafe" publicKeyToken="b03f5f7f11d50a3a" culture="neutral" />
-        <bindingRedirect oldVersion="0.0.0.0-5.0.0.0" newVersion="5.0.0.0" />
-      </dependentAssembly>
-      <dependentAssembly>
-        <assemblyIdentity name="System.Numerics.Vectors" publicKeyToken="b03f5f7f11d50a3a" culture="neutral" />
-        <bindingRedirect oldVersion="0.0.0.0-4.1.4.0" newVersion="4.1.4.0" />
-      </dependentAssembly>
-      <dependentAssembly>
-        <assemblyIdentity name="System.Buffers" publicKeyToken="cc7b13ffcd2ddd51" culture="neutral" />
-        <bindingRedirect oldVersion="0.0.0.0-4.0.3.0" newVersion="4.0.3.0" />
-      </dependentAssembly>
-      <dependentAssembly>
-        <assemblyIdentity name="System.Memory" publicKeyToken="cc7b13ffcd2ddd51" culture="neutral" />
-        <bindingRedirect oldVersion="0.0.0.0-4.0.1.2" newVersion="4.0.1.2" />
-      </dependentAssembly>
-      <dependentAssembly>
-        <assemblyIdentity name="System.Threading.Tasks.Extensions" publicKeyToken="cc7b13ffcd2ddd51" culture="neutral" />
-        <bindingRedirect oldVersion="0.0.0.0-4.2.0.0" newVersion="4.2.0.0" />
-      </dependentAssembly>
-    </assemblyBinding>
-    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
-      <dependentAssembly>
-        <assemblyIdentity name="System.Collections.Concurrent" publicKeyToken="b03f5f7f11d50a3a" culture="neutral" />
-        <bindingRedirect oldVersion="0.0.0.0-4.0.11.0" newVersion="4.0.11.0" />
-      </dependentAssembly>
-    </assemblyBinding>
-    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
-      <dependentAssembly>
-        <assemblyIdentity name="System.Collections" publicKeyToken="b03f5f7f11d50a3a" culture="neutral" />
-        <bindingRedirect oldVersion="0.0.0.0-4.0.11.0" newVersion="4.0.11.0" />
-      </dependentAssembly>
-    </assemblyBinding>
-    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
-      <dependentAssembly>
-        <assemblyIdentity name="System.ComponentModel" publicKeyToken="b03f5f7f11d50a3a" culture="neutral" />
-        <bindingRedirect oldVersion="0.0.0.0-4.0.1.0" newVersion="4.0.1.0" />
-      </dependentAssembly>
-    </assemblyBinding>
-    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
-      <dependentAssembly>
-        <assemblyIdentity name="System.ComponentModel.EventBasedAsync" publicKeyToken="b03f5f7f11d50a3a" culture="neutral" />
-        <bindingRedirect oldVersion="0.0.0.0-4.0.11.0" newVersion="4.0.11.0" />
-      </dependentAssembly>
-    </assemblyBinding>
-    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
-      <dependentAssembly>
-        <assemblyIdentity name="System.Data.Common" publicKeyToken="b03f5f7f11d50a3a" culture="neutral" />
-        <bindingRedirect oldVersion="0.0.0.0-4.2.0.0" newVersion="4.2.0.0" />
-      </dependentAssembly>
-    </assemblyBinding>
-    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
-      <dependentAssembly>
-        <assemblyIdentity name="System.Diagnostics.Contracts" publicKeyToken="b03f5f7f11d50a3a" culture="neutral" />
-        <bindingRedirect oldVersion="0.0.0.0-4.0.1.0" newVersion="4.0.1.0" />
-      </dependentAssembly>
-    </assemblyBinding>
-    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
-      <dependentAssembly>
-        <assemblyIdentity name="System.Diagnostics.Debug" publicKeyToken="b03f5f7f11d50a3a" culture="neutral" />
-        <bindingRedirect oldVersion="0.0.0.0-4.0.11.0" newVersion="4.0.11.0" />
-      </dependentAssembly>
-    </assemblyBinding>
-    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
-      <dependentAssembly>
-        <assemblyIdentity name="System.Diagnostics.StackTrace" publicKeyToken="b03f5f7f11d50a3a" culture="neutral" />
-        <bindingRedirect oldVersion="0.0.0.0-4.1.0.0" newVersion="4.1.0.0" />
-      </dependentAssembly>
-    </assemblyBinding>
-    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
-      <dependentAssembly>
-        <assemblyIdentity name="System.Diagnostics.Tools" publicKeyToken="b03f5f7f11d50a3a" culture="neutral" />
-        <bindingRedirect oldVersion="0.0.0.0-4.0.1.0" newVersion="4.0.1.0" />
-      </dependentAssembly>
-    </assemblyBinding>
-    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
-      <dependentAssembly>
-        <assemblyIdentity name="System.Diagnostics.Tracing" publicKeyToken="b03f5f7f11d50a3a" culture="neutral" />
-        <bindingRedirect oldVersion="0.0.0.0-4.2.0.0" newVersion="4.2.0.0" />
-      </dependentAssembly>
-    </assemblyBinding>
-    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
-      <dependentAssembly>
-        <assemblyIdentity name="System.Dynamic.Runtime" publicKeyToken="b03f5f7f11d50a3a" culture="neutral" />
-        <bindingRedirect oldVersion="0.0.0.0-4.0.11.0" newVersion="4.0.11.0" />
-      </dependentAssembly>
-    </assemblyBinding>
-    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
-      <dependentAssembly>
-        <assemblyIdentity name="System.Globalization" publicKeyToken="b03f5f7f11d50a3a" culture="neutral" />
-        <bindingRedirect oldVersion="0.0.0.0-4.0.11.0" newVersion="4.0.11.0" />
-      </dependentAssembly>
-    </assemblyBinding>
-    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
-      <dependentAssembly>
-        <assemblyIdentity name="System.Globalization.Extensions" publicKeyToken="b03f5f7f11d50a3a" culture="neutral" />
-        <bindingRedirect oldVersion="0.0.0.0-4.1.0.0" newVersion="4.1.0.0" />
-      </dependentAssembly>
-    </assemblyBinding>
-    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
-      <dependentAssembly>
-        <assemblyIdentity name="System.IO.Compression" publicKeyToken="b77a5c561934e089" culture="neutral" />
-        <bindingRedirect oldVersion="0.0.0.0-4.2.0.0" newVersion="4.2.0.0" />
-      </dependentAssembly>
-    </assemblyBinding>
-    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
-      <dependentAssembly>
-        <assemblyIdentity name="System.IO" publicKeyToken="b03f5f7f11d50a3a" culture="neutral" />
-        <bindingRedirect oldVersion="0.0.0.0-4.1.2.0" newVersion="4.1.2.0" />
-      </dependentAssembly>
-    </assemblyBinding>
-    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
-      <dependentAssembly>
-        <assemblyIdentity name="System.Linq" publicKeyToken="b03f5f7f11d50a3a" culture="neutral" />
-        <bindingRedirect oldVersion="0.0.0.0-4.1.2.0" newVersion="4.1.2.0" />
-      </dependentAssembly>
-    </assemblyBinding>
-    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
-      <dependentAssembly>
-        <assemblyIdentity name="System.Linq.Expressions" publicKeyToken="b03f5f7f11d50a3a" culture="neutral" />
-        <bindingRedirect oldVersion="0.0.0.0-4.1.2.0" newVersion="4.1.2.0" />
-      </dependentAssembly>
-    </assemblyBinding>
-    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
-      <dependentAssembly>
-        <assemblyIdentity name="System.Linq.Parallel" publicKeyToken="b03f5f7f11d50a3a" culture="neutral" />
-        <bindingRedirect oldVersion="0.0.0.0-4.0.1.0" newVersion="4.0.1.0" />
-      </dependentAssembly>
-    </assemblyBinding>
-    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
-      <dependentAssembly>
-        <assemblyIdentity name="System.Linq.Queryable" publicKeyToken="b03f5f7f11d50a3a" culture="neutral" />
-        <bindingRedirect oldVersion="0.0.0.0-4.0.1.0" newVersion="4.0.1.0" />
-      </dependentAssembly>
-    </assemblyBinding>
-    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
-      <dependentAssembly>
-        <assemblyIdentity name="System.Net.Http" publicKeyToken="b03f5f7f11d50a3a" culture="neutral" />
-        <bindingRedirect oldVersion="0.0.0.0-4.2.0.0" newVersion="4.2.0.0" />
-      </dependentAssembly>
-    </assemblyBinding>
-    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
-      <dependentAssembly>
-        <assemblyIdentity name="System.Net.NetworkInformation" publicKeyToken="b03f5f7f11d50a3a" culture="neutral" />
-        <bindingRedirect oldVersion="0.0.0.0-4.1.2.0" newVersion="4.1.2.0" />
-      </dependentAssembly>
-    </assemblyBinding>
-    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
-      <dependentAssembly>
-        <assemblyIdentity name="System.Net.Primitives" publicKeyToken="b03f5f7f11d50a3a" culture="neutral" />
-        <bindingRedirect oldVersion="0.0.0.0-4.0.11.0" newVersion="4.0.11.0" />
-      </dependentAssembly>
-    </assemblyBinding>
-    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
-      <dependentAssembly>
-        <assemblyIdentity name="System.Net.Requests" publicKeyToken="b03f5f7f11d50a3a" culture="neutral" />
-        <bindingRedirect oldVersion="0.0.0.0-4.0.11.0" newVersion="4.0.11.0" />
-      </dependentAssembly>
-    </assemblyBinding>
-    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
-      <dependentAssembly>
-        <assemblyIdentity name="System.Net.Sockets" publicKeyToken="b03f5f7f11d50a3a" culture="neutral" />
-        <bindingRedirect oldVersion="0.0.0.0-4.2.0.0" newVersion="4.2.0.0" />
-      </dependentAssembly>
-    </assemblyBinding>
-    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
-      <dependentAssembly>
-        <assemblyIdentity name="System.ObjectModel" publicKeyToken="b03f5f7f11d50a3a" culture="neutral" />
-        <bindingRedirect oldVersion="0.0.0.0-4.0.11.0" newVersion="4.0.11.0" />
-      </dependentAssembly>
-    </assemblyBinding>
-    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
-      <dependentAssembly>
-        <assemblyIdentity name="System.Reflection" publicKeyToken="b03f5f7f11d50a3a" culture="neutral" />
-        <bindingRedirect oldVersion="0.0.0.0-4.1.2.0" newVersion="4.1.2.0" />
-      </dependentAssembly>
-    </assemblyBinding>
-    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
-      <dependentAssembly>
-        <assemblyIdentity name="System.Reflection.Extensions" publicKeyToken="b03f5f7f11d50a3a" culture="neutral" />
-        <bindingRedirect oldVersion="0.0.0.0-4.0.1.0" newVersion="4.0.1.0" />
-      </dependentAssembly>
-    </assemblyBinding>
-    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
-      <dependentAssembly>
-        <assemblyIdentity name="System.Reflection.Primitives" publicKeyToken="b03f5f7f11d50a3a" culture="neutral" />
-        <bindingRedirect oldVersion="0.0.0.0-4.0.1.0" newVersion="4.0.1.0" />
-      </dependentAssembly>
-    </assemblyBinding>
-    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
-      <dependentAssembly>
-        <assemblyIdentity name="System.Resources.ResourceManager" publicKeyToken="b03f5f7f11d50a3a" culture="neutral" />
-        <bindingRedirect oldVersion="0.0.0.0-4.0.1.0" newVersion="4.0.1.0" />
-      </dependentAssembly>
-    </assemblyBinding>
-    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
-      <dependentAssembly>
-        <assemblyIdentity name="System.Runtime" publicKeyToken="b03f5f7f11d50a3a" culture="neutral" />
-        <bindingRedirect oldVersion="0.0.0.0-4.1.2.0" newVersion="4.1.2.0" />
-      </dependentAssembly>
-    </assemblyBinding>
-    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
-      <dependentAssembly>
-        <assemblyIdentity name="System.Runtime.Extensions" publicKeyToken="b03f5f7f11d50a3a" culture="neutral" />
-        <bindingRedirect oldVersion="0.0.0.0-4.1.2.0" newVersion="4.1.2.0" />
-      </dependentAssembly>
-    </assemblyBinding>
-    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
-      <dependentAssembly>
-        <assemblyIdentity name="System.Runtime.InteropServices" publicKeyToken="b03f5f7f11d50a3a" culture="neutral" />
-        <bindingRedirect oldVersion="0.0.0.0-4.1.2.0" newVersion="4.1.2.0" />
-      </dependentAssembly>
-    </assemblyBinding>
-    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
-      <dependentAssembly>
-        <assemblyIdentity name="System.Runtime.InteropServices.RuntimeInformation" publicKeyToken="b03f5f7f11d50a3a" culture="neutral" />
-        <bindingRedirect oldVersion="0.0.0.0-4.0.2.0" newVersion="4.0.2.0" />
-      </dependentAssembly>
-    </assemblyBinding>
-    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
-      <dependentAssembly>
-        <assemblyIdentity name="System.Runtime.Numerics" publicKeyToken="b03f5f7f11d50a3a" culture="neutral" />
-        <bindingRedirect oldVersion="0.0.0.0-4.0.1.0" newVersion="4.0.1.0" />
-      </dependentAssembly>
-    </assemblyBinding>
-    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
-      <dependentAssembly>
-        <assemblyIdentity name="System.Runtime.Serialization.Json" publicKeyToken="b03f5f7f11d50a3a" culture="neutral" />
-        <bindingRedirect oldVersion="0.0.0.0-4.0.1.0" newVersion="4.0.1.0" />
-      </dependentAssembly>
-    </assemblyBinding>
-    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
-      <dependentAssembly>
-        <assemblyIdentity name="System.Runtime.Serialization.Primitives" publicKeyToken="b03f5f7f11d50a3a" culture="neutral" />
-        <bindingRedirect oldVersion="0.0.0.0-4.2.0.0" newVersion="4.2.0.0" />
-      </dependentAssembly>
-    </assemblyBinding>
-    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
-      <dependentAssembly>
-        <assemblyIdentity name="System.Runtime.Serialization.Xml" publicKeyToken="b03f5f7f11d50a3a" culture="neutral" />
-        <bindingRedirect oldVersion="0.0.0.0-4.1.3.0" newVersion="4.1.3.0" />
-      </dependentAssembly>
-    </assemblyBinding>
-    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
-      <dependentAssembly>
-        <assemblyIdentity name="System.Security.Cryptography.Algorithms" publicKeyToken="b03f5f7f11d50a3a" culture="neutral" />
-        <bindingRedirect oldVersion="0.0.0.0-4.3.0.0" newVersion="4.3.0.0" />
-      </dependentAssembly>
-    </assemblyBinding>
-    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
-      <dependentAssembly>
-        <assemblyIdentity name="System.Security.Principal" publicKeyToken="b03f5f7f11d50a3a" culture="neutral" />
-        <bindingRedirect oldVersion="0.0.0.0-4.0.1.0" newVersion="4.0.1.0" />
-      </dependentAssembly>
-    </assemblyBinding>
-    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
-      <dependentAssembly>
-        <assemblyIdentity name="System.Security.SecureString" publicKeyToken="b03f5f7f11d50a3a" culture="neutral" />
-        <bindingRedirect oldVersion="0.0.0.0-4.1.0.0" newVersion="4.1.0.0" />
-      </dependentAssembly>
-    </assemblyBinding>
-    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
-      <dependentAssembly>
-        <assemblyIdentity name="System.Text.Encoding" publicKeyToken="b03f5f7f11d50a3a" culture="neutral" />
-        <bindingRedirect oldVersion="0.0.0.0-4.0.11.0" newVersion="4.0.11.0" />
-      </dependentAssembly>
-    </assemblyBinding>
-    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
-      <dependentAssembly>
-        <assemblyIdentity name="System.Text.Encoding.Extensions" publicKeyToken="b03f5f7f11d50a3a" culture="neutral" />
-        <bindingRedirect oldVersion="0.0.0.0-4.0.11.0" newVersion="4.0.11.0" />
-      </dependentAssembly>
-    </assemblyBinding>
-    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
-      <dependentAssembly>
-        <assemblyIdentity name="System.Text.RegularExpressions" publicKeyToken="b03f5f7f11d50a3a" culture="neutral" />
-        <bindingRedirect oldVersion="0.0.0.0-4.1.1.0" newVersion="4.1.1.0" />
-      </dependentAssembly>
-    </assemblyBinding>
-    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
-      <dependentAssembly>
-        <assemblyIdentity name="System.Threading" publicKeyToken="b03f5f7f11d50a3a" culture="neutral" />
-        <bindingRedirect oldVersion="0.0.0.0-4.0.11.0" newVersion="4.0.11.0" />
-      </dependentAssembly>
-    </assemblyBinding>
-    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
-      <dependentAssembly>
-        <assemblyIdentity name="System.Threading.Overlapped" publicKeyToken="b03f5f7f11d50a3a" culture="neutral" />
-        <bindingRedirect oldVersion="0.0.0.0-4.1.0.0" newVersion="4.1.0.0" />
-      </dependentAssembly>
-    </assemblyBinding>
-    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
-      <dependentAssembly>
-        <assemblyIdentity name="System.Threading.Tasks" publicKeyToken="b03f5f7f11d50a3a" culture="neutral" />
-        <bindingRedirect oldVersion="0.0.0.0-4.0.11.0" newVersion="4.0.11.0" />
-      </dependentAssembly>
-    </assemblyBinding>
-    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
-      <dependentAssembly>
-        <assemblyIdentity name="System.Threading.Tasks.Parallel" publicKeyToken="b03f5f7f11d50a3a" culture="neutral" />
-        <bindingRedirect oldVersion="0.0.0.0-4.0.1.0" newVersion="4.0.1.0" />
-      </dependentAssembly>
-    </assemblyBinding>
-    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
-      <dependentAssembly>
-        <assemblyIdentity name="System.Threading.Timer" publicKeyToken="b03f5f7f11d50a3a" culture="neutral" />
-        <bindingRedirect oldVersion="0.0.0.0-4.0.1.0" newVersion="4.0.1.0" />
-      </dependentAssembly>
-    </assemblyBinding>
-    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
-      <dependentAssembly>
-        <assemblyIdentity name="System.ValueTuple" publicKeyToken="cc7b13ffcd2ddd51" culture="neutral" />
-        <bindingRedirect oldVersion="0.0.0.0-4.0.2.0" newVersion="4.0.2.0" />
-      </dependentAssembly>
-    </assemblyBinding>
-    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
-      <dependentAssembly>
-        <assemblyIdentity name="System.Xml.ReaderWriter" publicKeyToken="b03f5f7f11d50a3a" culture="neutral" />
-        <bindingRedirect oldVersion="0.0.0.0-4.1.1.0" newVersion="4.1.1.0" />
-      </dependentAssembly>
-    </assemblyBinding>
-    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
-      <dependentAssembly>
-        <assemblyIdentity name="System.Xml.XDocument" publicKeyToken="b03f5f7f11d50a3a" culture="neutral" />
-        <bindingRedirect oldVersion="0.0.0.0-4.0.11.0" newVersion="4.0.11.0" />
-      </dependentAssembly>
-    </assemblyBinding>
-    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
-      <dependentAssembly>
-        <assemblyIdentity name="System.Xml.XmlSerializer" publicKeyToken="b03f5f7f11d50a3a" culture="neutral" />
-        <bindingRedirect oldVersion="0.0.0.0-4.0.11.0" newVersion="4.0.11.0" />
-      </dependentAssembly>
-    </assemblyBinding>
-    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
-      <dependentAssembly>
-        <assemblyIdentity name="System.Xml.XPath.XDocument" publicKeyToken="b03f5f7f11d50a3a" culture="neutral" />
-        <bindingRedirect oldVersion="0.0.0.0-4.1.0.0" newVersion="4.1.0.0" />
-      </dependentAssembly>
-    </assemblyBinding>
-  </runtime>
-</configuration>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<title>Haidee Manabat — QA Tester · Project Manager · Funnel Builder</title>
+<meta name="description" content="Senior Manual QA Tester, Project Manager, and Landing Page &amp; Funnel Builder. I help businesses ship reliable software, grow online, and convert traffic into clients." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --bg:#FBEFE4;
+    --bg-2:#F6E1D0;
+    --cream:#FFF7EE;
+    --ink:#1C140E;
+    --ink-soft:#4A3A2C;
+    --muted:#8A7462;
+    --line:#E9D6C2;
+    --accent:#F26C3A;
+    --accent-2:#FF8A5B;
+    --accent-soft:#FFD7BE;
+    --white:#ffffff;
+    --shadow-sm:0 1px 2px rgba(28,20,14,.06), 0 2px 6px rgba(28,20,14,.04);
+    --shadow:0 10px 30px -12px rgba(28,20,14,.25), 0 2px 6px rgba(28,20,14,.06);
+    --shadow-lg:0 30px 60px -20px rgba(28,20,14,.35), 0 8px 16px rgba(28,20,14,.08);
+    --radius:18px;
+    --radius-lg:28px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+    color:var(--ink);
+    background:var(--bg);
+    background-image:radial-gradient(1200px 600px at 10% -10%, #FFE6D1 0%, transparent 60%),
+                     radial-gradient(900px 500px at 100% 0%, #FFD1B6 0%, transparent 55%);
+    -webkit-font-smoothing:antialiased;
+    line-height:1.55;
+  }
+  h1,h2,h3,h4{font-family:'Fraunces',Georgia,serif;font-weight:500;letter-spacing:-.01em;line-height:1.08;margin:0 0 .5em}
+  h1{font-size:clamp(2.4rem, 5.6vw, 4.6rem);font-weight:400}
+  h2{font-size:clamp(1.9rem, 3.6vw, 2.9rem)}
+  h3{font-size:clamp(1.15rem,1.6vw,1.35rem)}
+  p{margin:0 0 1em;color:var(--ink-soft)}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  .container{max-width:1180px;margin:0 auto;padding:0 24px}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:.5rem;
+    font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--accent);font-weight:600;
+  }
+  .eyebrow::before{content:"";width:22px;height:1px;background:var(--accent)}
+
+  /* ---------- Nav ---------- */
+  .nav{
+    position:sticky;top:0;z-index:50;
+    backdrop-filter:saturate(140%) blur(14px);
+    -webkit-backdrop-filter:saturate(140%) blur(14px);
+    background:rgba(251,239,228,.72);
+    border-bottom:1px solid rgba(233,214,194,.5);
+  }
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+  .brand{display:flex;align-items:center;gap:.7rem;font-weight:700;letter-spacing:.02em}
+  .brand .mark{
+    width:34px;height:34px;border-radius:50%;
+    background:linear-gradient(135deg,var(--accent),var(--accent-2));
+    display:grid;place-items:center;color:#fff;font-family:'Fraunces',serif;font-weight:600;
+    box-shadow:var(--shadow-sm);
+  }
+  .nav-links{display:flex;gap:2rem;align-items:center}
+  .nav-links a{font-size:.92rem;color:var(--ink-soft);font-weight:500;position:relative}
+  .nav-links a:hover{color:var(--accent)}
+  .nav-links a::after{
+    content:"";position:absolute;left:0;bottom:-6px;height:2px;width:0;background:var(--accent);
+    transition:width .25s ease;
+  }
+  .nav-links a:hover::after{width:100%}
+  .btn{
+    display:inline-flex;align-items:center;gap:.55rem;
+    padding:.85rem 1.3rem;border-radius:999px;
+    font-weight:600;font-size:.92rem;letter-spacing:.01em;
+    transition:transform .15s ease, box-shadow .2s ease, background .2s ease;
+    cursor:pointer;border:0;
+  }
+  .btn-primary{
+    background:linear-gradient(135deg,var(--accent),var(--accent-2));
+    color:#fff;box-shadow:0 10px 24px -10px rgba(242,108,58,.7), inset 0 1px 0 rgba(255,255,255,.3);
+  }
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 14px 30px -10px rgba(242,108,58,.8)}
+  .btn-ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+  .btn-ghost:hover{border-color:var(--accent);color:var(--accent)}
+  .menu-toggle{display:none;background:none;border:0;cursor:pointer;padding:8px}
+  .menu-toggle span{display:block;width:22px;height:2px;background:var(--ink);margin:5px 0;border-radius:2px;transition:.2s}
+
+  /* ---------- Hero ---------- */
+  .hero{padding:72px 0 64px;position:relative;overflow:hidden}
+  .hero-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:center}
+  .hero h1 span.accent{
+    background:linear-gradient(120deg,var(--accent),#E9522E);
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+    font-style:italic;font-weight:600;
+  }
+  .hero .kicker{font-size:1.1rem;color:var(--muted);margin-bottom:1.4rem;max-width:48ch}
+  .pain-list{list-style:none;padding:0;margin:1.6rem 0 2rem}
+  .pain-list li{
+    display:flex;align-items:center;gap:.8rem;padding:.55rem 0;
+    font-size:1.05rem;color:var(--ink-soft);
+  }
+  .pain-list li .x{
+    width:22px;height:22px;border-radius:50%;
+    background:#FFE1D1;color:var(--accent);
+    display:grid;place-items:center;font-size:.8rem;font-weight:700;flex-shrink:0;
+  }
+  .hero-cta{display:flex;gap:.8rem;flex-wrap:wrap;align-items:center}
+  .badge{
+    display:inline-flex;align-items:center;gap:.5rem;
+    background:rgba(255,255,255,.7);border:1px solid var(--line);
+    padding:.5rem .9rem;border-radius:999px;font-size:.85rem;color:var(--ink-soft);
+    font-weight:500;
+  }
+  .badge .dot{width:8px;height:8px;border-radius:50%;background:#2ECC71;box-shadow:0 0 0 4px rgba(46,204,113,.15)}
+
+  .hero-visual{position:relative;aspect-ratio:1/1;display:grid;place-items:center}
+  .hero-blob{
+    position:absolute;inset:8%;
+    background:radial-gradient(closest-side, var(--accent-soft), var(--accent-2) 70%, transparent 71%);
+    border-radius:50%;filter:blur(.3px);
+    animation:blob 9s ease-in-out infinite;
+  }
+  @keyframes blob{
+    0%,100%{transform:scale(1) rotate(0)}
+    50%{transform:scale(1.05) rotate(8deg)}
+  }
+  .hero-photo{
+    position:relative;z-index:2;width:86%;aspect-ratio:1/1;border-radius:50%;overflow:hidden;
+    box-shadow:var(--shadow-lg);
+    background:#FFE6D1 center/cover no-repeat;
+    background-image:url("MEME.png");
+    filter:contrast(1.12) saturate(1.12);
+    image-rendering:-webkit-optimize-contrast;
+    image-rendering:crisp-edges;
+  }
+  .hero-card{
+    position:absolute;z-index:3;background:#fff;border-radius:16px;padding:14px 16px;
+    box-shadow:var(--shadow);display:flex;align-items:center;gap:.7rem;font-size:.88rem;font-weight:500;
+  }
+  .hero-card.c1{top:8%;right:-6%;animation:float 6s ease-in-out infinite}
+  .hero-card.c2{bottom:10%;left:-8%;animation:float 7s ease-in-out infinite reverse}
+  .hero-card .ico{
+    width:36px;height:36px;border-radius:10px;display:grid;place-items:center;
+    background:linear-gradient(135deg,#FFE1D1,#FFD0B2);color:var(--accent);font-weight:700;
+  }
+  @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+
+  .stats{
+    margin-top:56px;background:#fff;border:1px solid var(--line);border-radius:var(--radius-lg);
+    padding:28px 28px;display:grid;grid-template-columns:repeat(4,1fr);gap:24px;
+    box-shadow:var(--shadow-sm);
+  }
+  .stat .n{font-family:'Fraunces',serif;font-size:2.1rem;color:var(--accent);font-weight:500}
+  .stat .l{font-size:.88rem;color:var(--muted)}
+
+  /* ---------- Sections ---------- */
+  section{padding:96px 0;position:relative}
+  .section-head{max-width:720px;margin:0 auto 56px;text-align:center}
+  .section-head h2{margin-top:.6rem}
+  .section-head p{color:var(--muted);font-size:1.05rem}
+
+  /* ---------- About ---------- */
+  .about{background:linear-gradient(180deg, transparent 0%, rgba(255,247,238,.6) 100%)}
+  .about-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:56px;align-items:center}
+  .about-photo{
+    border-radius:var(--radius-lg);overflow:hidden;aspect-ratio:4/5;
+    background:#FFE6D1 center/cover no-repeat;background-image:url("MEME.png");
+    box-shadow:var(--shadow-lg);position:relative;
+    filter:contrast(1.1) saturate(1.1);
+  }
+  .about-photo::after{
+    content:"";position:absolute;inset:0;
+    background:linear-gradient(180deg, transparent 60%, rgba(28,20,14,.15));
+  }
+  .about h2 em{color:var(--accent);font-style:normal}
+  .about-points{display:grid;gap:1rem;margin-top:1.6rem}
+  .about-point{
+    display:flex;gap:1rem;padding:1rem 1.2rem;background:#fff;border:1px solid var(--line);
+    border-radius:14px;box-shadow:var(--shadow-sm);
+  }
+  .about-point .ico{
+    width:40px;height:40px;border-radius:10px;flex-shrink:0;
+    background:linear-gradient(135deg,#FFE1D1,#FFD0B2);color:var(--accent);
+    display:grid;place-items:center;font-weight:700;
+  }
+  .about-point h4{margin:0 0 .25rem;font-family:'Inter',sans-serif;font-weight:600;font-size:1rem}
+  .about-point p{margin:0;font-size:.92rem;color:var(--muted)}
+
+  /* ---------- Services ---------- */
+  .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .service{
+    background:#fff;border:1px solid var(--line);border-radius:var(--radius-lg);
+    padding:32px 28px;position:relative;overflow:hidden;
+    transition:transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+    display:flex;flex-direction:column;
+  }
+  .service .btn{margin-top:auto}
+  .service::before{
+    content:"";position:absolute;top:0;left:0;right:0;height:4px;
+    background:linear-gradient(90deg,var(--accent),var(--accent-2));
+    transform:scaleX(0);transform-origin:left;transition:transform .4s ease;
+  }
+  .service:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg);border-color:var(--accent-soft)}
+  .service:hover::before{transform:scaleX(1)}
+  .service .num{
+    font-family:'Fraunces',serif;font-size:.95rem;color:var(--muted);letter-spacing:.08em;
+  }
+  .service h3{margin-top:.5rem;margin-bottom:.8rem}
+  .service .lede{color:var(--muted);font-size:.95rem;margin-bottom:1.2rem}
+  .service ul{list-style:none;padding:0;margin:0 0 1.6rem}
+  .service li{
+    padding:.5rem 0;font-size:.92rem;color:var(--ink-soft);
+    display:flex;gap:.6rem;align-items:flex-start;
+    border-bottom:1px dashed var(--line);
+  }
+  .service li:last-child{border-bottom:0}
+  .service li::before{
+    content:"";width:6px;height:6px;border-radius:50%;background:var(--accent);
+    margin-top:.55rem;flex-shrink:0;
+  }
+  .service .btn{width:100%;justify-content:center}
+
+  /* ---------- Tools ---------- */
+  .tools{background:var(--cream);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .tool-group{margin-bottom:40px}
+  .tool-group:last-child{margin-bottom:0}
+  .tool-group-label{
+    text-align:center;font-size:.85rem;letter-spacing:.2em;text-transform:uppercase;
+    color:var(--muted);font-weight:600;margin-bottom:20px;
+  }
+  .tool-row{
+    display:flex;flex-wrap:wrap;justify-content:center;gap:14px;
+  }
+  .tool{
+    min-width:120px;padding:.9rem 1.1rem;background:#fff;border:1px solid var(--line);
+    border-radius:14px;font-size:.88rem;font-weight:500;color:var(--ink-soft);
+    display:inline-flex;align-items:center;gap:.6rem;
+    transition:all .2s ease;box-shadow:var(--shadow-sm);
+  }
+  .tool:hover{transform:translateY(-3px);border-color:var(--accent-soft);color:var(--accent);box-shadow:var(--shadow)}
+  .tool img{width:20px;height:20px;object-fit:contain;flex-shrink:0}
+
+  /* ---------- Portfolio ---------- */
+  .filters{display:flex;flex-wrap:wrap;gap:.5rem;justify-content:center;margin-bottom:36px}
+  .filter{
+    padding:.6rem 1.1rem;border-radius:999px;font-size:.88rem;font-weight:500;
+    background:#fff;border:1px solid var(--line);color:var(--ink-soft);cursor:pointer;
+    transition:all .2s ease;
+  }
+  .filter.active,.filter:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
+  .work-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:20px;grid-auto-rows:minmax(240px,auto);grid-auto-flow:dense}
+  .work{
+    position:relative;border-radius:var(--radius);overflow:hidden;
+    background:#fff center/cover no-repeat;border:1px solid var(--line);
+    cursor:pointer;transition:transform .3s ease;
+  }
+  .work:hover{transform:translateY(-4px)}
+  .work::after{
+    content:"";position:absolute;inset:0;
+    background:linear-gradient(180deg, transparent 40%, rgba(28,20,14,.78));
+    opacity:.9;transition:opacity .3s ease;
+  }
+  .work:hover::after{opacity:1}
+  .work .meta{
+    position:absolute;left:18px;right:18px;bottom:16px;z-index:2;color:#fff;
+  }
+  .work .tag{
+    display:inline-block;font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;
+    background:rgba(255,255,255,.15);backdrop-filter:blur(8px);
+    padding:4px 10px;border-radius:999px;margin-bottom:8px;
+  }
+  .work h4{margin:0;font-family:'Inter',sans-serif;font-weight:600;font-size:1.05rem}
+  .work.w-tall{grid-row:span 2}
+  .work.w-wide{grid-column:span 2}
+  .work.w-big{grid-row:span 2;grid-column:span 2}
+  /* per-work bg */
+  .work-qa{
+    grid-column:1 / -1;grid-row:auto;
+    background:transparent;border:0;padding:0;overflow:visible;
+    display:flex;flex-direction:column;gap:16px;cursor:default;
+  }
+  .work-qa::after{display:none}
+  .qa-frame{
+    display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;align-items:start;
+  }
+  .qa-slot{
+    border-radius:14px;overflow:hidden;background:#fff;
+    box-shadow:var(--shadow);border:1px solid var(--line);
+    line-height:0;
+  }
+  .qa-slot img{width:100%;height:auto;display:block}
+  .work-qa .work-caption,.work-brand .work-caption,.work-social .work-caption{padding:0;margin-bottom:4px}
+  .work-qa .work-caption .tag,
+  .work-brand .work-caption .tag,
+  .work-social .work-caption .tag{
+    font-size:1.5rem;letter-spacing:.18em;margin-bottom:10px;
+  }
+  .work-qa .work-caption h4,
+  .work-brand .work-caption h4,
+  .work-social .work-caption h4{
+    font-size:1.05rem;
+    font-family:'Inter',sans-serif;font-weight:500;
+    color:var(--muted);letter-spacing:0;line-height:1.4;
+  }
+  .work-brand{
+    grid-column:1 / -1;grid-row:auto;
+    background:transparent;border:0;padding:0;overflow:visible;
+    display:flex;flex-direction:column;gap:16px;cursor:default;
+  }
+  .work-brand::after{display:none}
+  .brand-frame{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:16px;align-items:start;
+  }
+  .brand-slot{
+    border-radius:14px;overflow:hidden;background:#fff;
+    box-shadow:var(--shadow);border:1px solid var(--line);line-height:0;
+    transition:transform .3s ease, box-shadow .3s ease;
+  }
+  .brand-slot:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+  .brand-slot img{width:100%;height:auto;display:block}
+  .work-social{
+    grid-column:1 / -1;grid-row:auto;
+    background:transparent;border:0;padding:0;overflow:visible;
+    display:flex;flex-direction:column;gap:28px;cursor:default;
+  }
+  .work-social::after{display:none}
+  .social-group{display:flex;flex-direction:column;gap:12px}
+  .social-sub{
+    font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--accent);font-weight:700;
+  }
+  .social-frame{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:16px;align-items:start;
+  }
+  .social-slot{
+    border-radius:14px;overflow:hidden;background:#fff;
+    box-shadow:var(--shadow);border:1px solid var(--line);line-height:0;
+    transition:transform .3s ease, box-shadow .3s ease;
+  }
+  .social-slot:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+  .social-slot img{width:100%;height:auto;display:block}
+
+  /* ---------- Platforms standalone section ---------- */
+  .platforms-section{background:var(--cream);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .platforms-row{display:flex;justify-content:center;gap:24px;flex-wrap:wrap}
+  .platform{
+    flex:1 1 150px;max-width:200px;
+    background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+    padding:28px 20px;display:flex;flex-direction:column;align-items:center;gap:14px;
+    box-shadow:var(--shadow-sm);transition:all .3s ease;
+  }
+  .platform:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:var(--accent-soft)}
+  .platform img{width:44px;height:44px;object-fit:contain}
+  .platform span{font-weight:600;color:var(--ink);font-size:.95rem}
+  .work-caption{padding:2px 4px 4px}
+  .work-caption .tag{
+    display:inline-block;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--accent);font-weight:700;margin-bottom:4px;
+  }
+  .work-caption h4{margin:0;font-family:'Inter',sans-serif;font-weight:600;font-size:1.02rem;color:var(--ink)}
+  /* ---------- Landing Page & Funnel ---------- */
+  .work-landing{
+    grid-column:1 / -1;grid-row:auto;
+    background:transparent;border:0;padding:0;overflow:visible;
+    display:flex;flex-direction:column;gap:16px;cursor:default;
+  }
+  .work-landing::after{display:none}
+  .work-landing .work-caption{padding:0;margin-bottom:4px}
+  .work-landing .work-caption .tag{font-size:1.5rem;letter-spacing:.18em;margin-bottom:10px}
+  .work-landing .work-caption h4{font-size:1.05rem;font-family:'Inter',sans-serif;font-weight:500;color:var(--muted);letter-spacing:0;line-height:1.4}
+  .landing-frame{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
+  .landing-slot{display:flex;flex-direction:column;gap:12px}
+  .browser-mock{
+    background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;
+    box-shadow:var(--shadow-lg);line-height:0;
+  }
+  .browser-bar{
+    display:flex;align-items:center;gap:8px;
+    padding:12px 14px;background:#F3E9DD;border-bottom:1px solid var(--line);
+  }
+  .browser-bar .dot{width:11px;height:11px;border-radius:50%;display:inline-block}
+  .browser-bar .dot.r{background:#FF5F57}
+  .browser-bar .dot.y{background:#FEBC2E}
+  .browser-bar .dot.g{background:#28C840}
+  .browser-bar .url{
+    flex:1;margin-left:10px;background:#fff;border:1px solid var(--line);
+    border-radius:8px;padding:6px 14px;font-size:.8rem;color:var(--muted);
+    font-family:'Inter',sans-serif;text-align:center;letter-spacing:.02em;
+  }
+  .browser-mock video{width:100%;height:auto;display:block;background:#000}
+  .landing-label{
+    font-size:.95rem;color:var(--ink-soft);font-weight:500;padding:0 4px;line-height:1.4;
+  }
+  .landing-label strong{color:var(--ink);font-weight:700}
+
+  /* ---------- Short-Form Video ---------- */
+  .work-video{
+    grid-column:1 / -1;grid-row:auto;
+    background:transparent;border:0;padding:0;overflow:visible;
+    display:flex;flex-direction:column;gap:20px;cursor:default;
+  }
+  .work-video::after{display:none}
+  .work-video .work-caption{padding:0;margin-bottom:4px}
+  .work-video .work-caption .tag{font-size:1.5rem;letter-spacing:.18em;margin-bottom:10px}
+  .work-video .work-caption h4{font-size:1.05rem;font-family:'Inter',sans-serif;font-weight:500;color:var(--muted);letter-spacing:0;line-height:1.4}
+  .video-frame{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:28px;justify-items:center;align-items:start;
+  }
+  .phone-mock{
+    position:relative;width:100%;max-width:260px;
+    background:#111;border-radius:36px;padding:12px;
+    box-shadow:var(--shadow-lg);
+    border:2px solid #2a2a2a;
+  }
+  .phone-mock::before{
+    content:"";position:absolute;top:18px;left:50%;transform:translateX(-50%);
+    width:90px;height:22px;background:#000;border-radius:14px;z-index:2;
+  }
+  .phone-mock video{
+    width:100%;aspect-ratio:9/19.5;object-fit:cover;
+    border-radius:26px;background:#000;display:block;cursor:pointer;
+  }
+  .phone-mock .sound-ind{
+    position:absolute;bottom:22px;right:22px;z-index:3;
+    width:38px;height:38px;border-radius:50%;
+    background:rgba(0,0,0,.55);backdrop-filter:blur(8px);
+    display:grid;place-items:center;color:#fff;font-size:1rem;
+    cursor:pointer;pointer-events:none;
+    transition:opacity .25s ease;
+  }
+  .phone-mock.unmuted .sound-ind{opacity:0}
+  .browser-mock video{cursor:pointer}
+  .video-label{text-align:center;font-size:.9rem;color:var(--ink-soft);font-weight:500;margin-top:10px}
+  .video-label strong{color:var(--ink)}
+
+  /* ---------- Process ---------- */
+  .process{background:#1C140E;color:#FFF7EE}
+  .process h2{color:#FFF7EE}
+  .process .section-head p{color:#D9C7B5}
+  .process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+  .step{
+    padding:28px 24px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);
+    border-radius:var(--radius);position:relative;
+  }
+  .step .n{
+    font-family:'Fraunces',serif;font-size:2.6rem;color:var(--accent-2);font-weight:500;line-height:1;
+  }
+  .step h4{font-family:'Inter',sans-serif;font-weight:600;margin:.8rem 0 .5rem;color:#FFF7EE}
+  .step p{color:#B8A593;font-size:.92rem;margin:0}
+
+  /* ---------- Certificates ---------- */
+  .certs-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+  .cert{
+    background:#fff;border:1px solid var(--line);border-radius:var(--radius-lg);
+    padding:28px;display:flex;gap:20px;align-items:center;box-shadow:var(--shadow-sm);
+    transition:all .25s ease;
+  }
+  .cert:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+  .cert .seal{
+    width:68px;height:68px;border-radius:50%;flex-shrink:0;
+    background:linear-gradient(135deg,var(--accent),var(--accent-2));
+    color:#fff;display:grid;place-items:center;font-family:'Fraunces',serif;font-size:1.4rem;
+  }
+  .cert h4{margin:0 0 .25rem;font-family:'Inter',sans-serif;font-weight:600}
+  .cert p{margin:0;font-size:.88rem;color:var(--muted)}
+
+  /* ---------- Contact ---------- */
+  .contact{background:linear-gradient(135deg,#FFD7BE 0%, #FFAE85 60%, #F26C3A 100%);color:#fff;position:relative;overflow:hidden}
+  .contact::before{
+    content:"";position:absolute;inset:0;
+    background:radial-gradient(600px 400px at 80% 20%, rgba(255,255,255,.25), transparent);
+    pointer-events:none;
+  }
+  .contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center;position:relative}
+  .contact h2{color:#fff;font-size:clamp(2.2rem,4.5vw,3.6rem)}
+  .contact .lede{color:rgba(255,255,255,.92);font-size:1.1rem;max-width:48ch;margin-bottom:2rem}
+  .contact-info{display:grid;gap:14px;margin-top:1.5rem}
+  .contact-info a{
+    display:flex;align-items:center;gap:.9rem;background:rgba(255,255,255,.14);
+    backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.25);
+    padding:14px 18px;border-radius:14px;font-weight:500;transition:all .2s ease;
+  }
+  .contact-info a:hover{background:rgba(255,255,255,.24);transform:translateX(4px)}
+  .contact-info .ico{
+    width:38px;height:38px;border-radius:10px;background:rgba(255,255,255,.2);
+    display:grid;place-items:center;font-weight:700;
+  }
+  .form-card{
+    background:#fff;color:var(--ink);border-radius:var(--radius-lg);padding:32px;
+    box-shadow:var(--shadow-lg);
+  }
+  .form-card h3{margin-top:0;font-size:1.4rem}
+  .form-card p{color:var(--muted);font-size:.92rem;margin-bottom:1.4rem}
+  .field{margin-bottom:14px}
+  .field label{display:block;font-size:.82rem;font-weight:600;color:var(--ink);margin-bottom:6px;letter-spacing:.02em}
+  .field input,.field select,.field textarea{
+    width:100%;padding:.85rem 1rem;border:1px solid var(--line);border-radius:12px;
+    font-family:inherit;font-size:.95rem;background:#FFF9F3;color:var(--ink);
+    transition:border-color .2s ease, box-shadow .2s ease;
+  }
+  .field input:focus,.field select:focus,.field textarea:focus{
+    outline:0;border-color:var(--accent);box-shadow:0 0 0 4px rgba(242,108,58,.15);background:#fff;
+  }
+  .field textarea{min-height:100px;resize:vertical}
+  .form-card .btn{width:100%;justify-content:center;margin-top:6px}
+
+  /* ---------- Footer ---------- */
+  footer{background:#1C140E;color:#D9C7B5;padding:56px 0 28px}
+  .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:48px;margin-bottom:36px}
+  .foot-brand{display:flex;align-items:center;gap:.7rem;color:#fff;font-weight:700;margin-bottom:1rem}
+  footer p{color:#B8A593;margin:0 0 .6rem;font-size:.92rem}
+  footer h5{color:#fff;font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;margin:0 0 1rem}
+  footer ul{list-style:none;padding:0;margin:0}
+  footer ul li{margin-bottom:.5rem}
+  footer ul a{color:#D9C7B5;font-size:.92rem}
+  footer ul a:hover{color:var(--accent-2)}
+  .foot-bottom{
+    border-top:1px solid rgba(255,255,255,.1);padding-top:20px;
+    display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;
+    font-size:.85rem;color:#8A7462;
+  }
+  .foot-socials{display:flex;gap:10px}
+  .foot-socials a{
+    width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.08);
+    display:grid;place-items:center;transition:all .2s ease;color:#D9C7B5;
+  }
+  .foot-socials a:hover{background:var(--accent);color:#fff;transform:translateY(-2px)}
+
+  /* ---------- Reveal animations ---------- */
+  .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease, transform .7s ease}
+  .reveal.in{opacity:1;transform:none}
+
+  /* ---------- Responsive ---------- */
+  @media (max-width: 960px){
+    .hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}
+    .services-grid,.process-grid{grid-template-columns:1fr 1fr}
+    .stats{grid-template-columns:1fr 1fr}
+    .work-grid{grid-template-columns:repeat(2,1fr)}
+    .landing-frame{grid-template-columns:1fr}
+    .work{aspect-ratio:16/10}
+    .foot-grid{grid-template-columns:1fr;gap:28px}
+    .hero-card.c1{right:0;top:0}
+    .hero-card.c2{left:0;bottom:0}
+  }
+  @media (max-width: 640px){
+    .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:#fff;flex-direction:column;padding:20px;gap:1rem;border-bottom:1px solid var(--line)}
+    .nav-links.open{display:flex}
+    .menu-toggle{display:block}
+    .services-grid,.process-grid,.certs-grid,.stats{grid-template-columns:1fr}
+    section{padding:72px 0}
+    .hero{padding:40px 0 48px}
+    .hero-cta{flex-direction:column;align-items:stretch}
+    .hero-cta .btn{justify-content:center}
+    .badge{justify-content:center}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<header class="nav">
+  <div class="container nav-inner">
+    <a href="#home" class="brand">
+      <span class="mark">H</span>
+      <span>Haidee Manabat</span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#work">Work</a>
+      <a href="#process">Process</a>
+      <a href="#contact">Contact</a>
+      <a href="#contact" class="btn btn-primary" style="padding:.65rem 1.1rem">Hire Me</a>
+    </nav>
+    <button class="menu-toggle" aria-label="Menu" onclick="document.getElementById('navLinks').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section id="home" class="hero">
+  <div class="container hero-grid">
+    <div class="reveal">
+      <span class="badge"><span class="dot"></span> Available for new projects · April 2026</span>
+      <h1 style="margin-top:1.2rem">Hi, I'm Haidee. <br>I turn messy products into <span class="accent">clean, converting</span> ones.</h1>
+      <p class="kicker">Senior Manual QA Tester, Project Manager, and Landing Page &amp; Funnel Builder — helping founders and teams ship software that works and pages that sell.</p>
+      <ul class="pain-list">
+        <li><span class="x">✕</span> Bugs slowing you down in production</li>
+        <li><span class="x">✕</span> Social content that isn't pulling clients</li>
+        <li><span class="x">✕</span> Landing pages that leak conversions</li>
+      </ul>
+      <div class="hero-cta">
+        <a href="#contact" class="btn btn-primary">Let's work together →</a>
+        <a href="#work" class="btn btn-ghost">See my work</a>
+      </div>
+    </div>
+    <div class="hero-visual reveal">
+      <div class="hero-blob"></div>
+      <div class="hero-photo" aria-hidden="true"></div>
+      <div class="hero-card c1">
+        <span class="ico">✓</span>
+        <div>
+          <div style="font-size:.72rem;color:var(--muted);letter-spacing:.1em;text-transform:uppercase">QA Signed Off</div>
+          <div>Zero critical bugs</div>
+        </div>
+      </div>
+      <div class="hero-card c2">
+        <span class="ico">↑</span>
+        <div>
+          <div style="font-size:.72rem;color:var(--muted);letter-spacing:.1em;text-transform:uppercase">Landing page</div>
+          <div>+47% conversions</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="stats reveal" style="margin-top:56px">
+      <div class="stat"><div class="n">5+</div><div class="l">Years in QA &amp; delivery</div></div>
+      <div class="stat"><div class="n">30+</div><div class="l">Projects shipped</div></div>
+      <div class="stat"><div class="n">5</div><div class="l">Social platforms managed</div></div>
+      <div class="stat"><div class="n">100%</div><div class="l">Client satisfaction</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section id="about" class="about">
+  <div class="container about-grid">
+    <div class="about-photo reveal" aria-hidden="true"></div>
+    <div class="reveal">
+      <span class="eyebrow">About me</span>
+      <h2>Your quality eye. Your project backbone. Your <em>digital growth partner.</em></h2>
+      <p>I'm a Senior Manual QA Tester and Project Manager with years of experience helping businesses build reliable software and deliver projects on time. My career is built on a simple principle: <strong>software should work exactly the way people expect it to — and when it doesn't, I find out why.</strong></p>
+      <p>Beyond quality and delivery, I design and build high-converting landing pages and sales funnels — combining clean design, strategic copywriting, and user flow optimization. I also manage social media for startups and freelance clients across Instagram, TikTok, Facebook, LinkedIn, and Threads.</p>
+      <div class="about-points">
+        <div class="about-point">
+          <span class="ico">QA</span>
+          <div><h4>Reliable software, shipped on time</h4><p>Manual QA, bug reporting, test case design, full-cycle sign-off.</p></div>
+        </div>
+        <div class="about-point">
+          <span class="ico">PM</span>
+          <div><h4>Projects that actually finish</h4><p>Requirements, roadmaps, stakeholder alignment, delivery.</p></div>
+        </div>
+        <div class="about-point">
+          <span class="ico">GR</span>
+          <div><h4>Growth that converts, not just looks pretty</h4><p>Landing pages, funnels, social content, performance analytics.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section id="services">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">What I do</span>
+      <h2>Three ways I help you win</h2>
+      <p>Pick what you need today — or combine them into a single partnership. Either way, you get one dedicated person who owns the outcome.</p>
+    </div>
+
+    <div class="services-grid">
+
+      <div class="service reveal">
+        <div class="num">01 / Software</div>
+        <h3>Software Tester &amp; Project Management</h3>
+        <p class="lede">Perfect for teams who need a reliable pair of hands on QA and delivery. I become the backbone that keeps shipping on schedule.</p>
+        <ul>
+          <li>Manual QA testing &amp; exploratory testing</li>
+          <li>Bug reporting &amp; documentation</li>
+          <li>Test case creation &amp; execution</li>
+          <li>Requirements gathering &amp; analysis</li>
+          <li>Project planning &amp; timeline management</li>
+          <li>Team &amp; stakeholder coordination</li>
+          <li>Process documentation</li>
+          <li>Full-cycle QA sign-off</li>
+        </ul>
+        <a href="#contact" class="btn btn-primary">Get started</a>
+      </div>
+
+      <div class="service reveal">
+        <div class="num">02 / Growth</div>
+        <h3>Social Media Manager</h3>
+        <p class="lede">Built for brands that need consistent growth. I become a dedicated part of your team — handling content, performance, and everything between.</p>
+        <ul>
+          <li>Content planning &amp; scheduling</li>
+          <li>Performance analytics &amp; monthly reports</li>
+          <li>Growth strategy execution</li>
+          <li>Copywriting &amp; captioning</li>
+          <li>Community management</li>
+          <li>Branded graphics &amp; visuals</li>
+          <li>Multi-platform management</li>
+          <li>Ongoing strategy &amp; optimization</li>
+        </ul>
+        <a href="#contact" class="btn btn-primary">Get started</a>
+      </div>
+
+      <div class="service reveal">
+        <div class="num">03 / Conversion</div>
+        <h3>Landing Page &amp; Funnel Builder</h3>
+        <p class="lede">From concept to launch — I design and build landing pages and sales funnels that look great and actually convert.</p>
+        <ul>
+          <li>Landing page design &amp; development</li>
+          <li>Sales funnel strategy &amp; optimization</li>
+          <li>Lead capture &amp; form integration</li>
+          <li>Conversion copywriting</li>
+          <li>Mobile-responsive design</li>
+          <li>Clean, hand-coded builds</li>
+          <li>Funnel setup &amp; launch</li>
+          <li>Performance tracking &amp; post-launch support</li>
+        </ul>
+        <a href="#contact" class="btn btn-primary">Get started</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ TOOLS ============ -->
+<section class="tools">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">My toolkit</span>
+      <h2>Tools I use every day</h2>
+      <p>Battle-tested across real client projects — chosen for speed, reliability, and results.</p>
+    </div>
+
+    <div class="tool-group reveal">
+      <div class="tool-group-label">Social Media &amp; Video Editing</div>
+      <div class="tool-row">
+        <span class="tool"><img src="https://cdn.simpleicons.org/googledrive" alt="" />Google Drive</span>
+        <span class="tool"><img src="https://cdn.simpleicons.org/gmail" alt="" />Gmail</span>
+        <span class="tool"><img src="https://cdn.simpleicons.org/googlecalendar" alt="" />Calendar</span>
+        <span class="tool"><img src="https://cdn.simpleicons.org/googlesheets" alt="" />Sheets</span>
+        <span class="tool"><img src="https://cdn.simpleicons.org/googlemeet" alt="" />Google Meet</span>
+        <span class="tool"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/canva.svg" alt="" />Canva</span>
+        <span class="tool"><img src="https://unpkg.com/@lobehub/icons-static-png@latest/light/capcut.png" alt="" />CapCut</span>
+        <span class="tool"><img src="https://cdn.simpleicons.org/youtube" alt="" />YouTube</span>
+        <span class="tool"><img src="https://cdn.simpleicons.org/pinterest" alt="" />Pinterest</span>
+        <span class="tool"><img src="https://cdn.simpleicons.org/tiktok" alt="" />TikTok</span>
+      </div>
+    </div>
+
+    <div class="tool-group reveal">
+      <div class="tool-group-label">QA &amp; Project Management</div>
+      <div class="tool-row">
+        <span class="tool"><img src="https://cdn.simpleicons.org/trello" alt="" />Trello</span>
+        <span class="tool"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/slack.svg" alt="" />Slack</span>
+        <span class="tool"><img src="https://cdn.simpleicons.org/linear" alt="" />Linear</span>
+        <span class="tool"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/openai.svg" alt="" />ChatGPT</span>
+        <span class="tool"><img src="https://cdn.simpleicons.org/claude" alt="" />Claude</span>
+        <span class="tool"><img src="https://cdn.simpleicons.org/postman" alt="" />Postman</span>
+        <span class="tool"><img src="https://cdn.simpleicons.org/asana" alt="" />Asana</span>
+        <span class="tool"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/microsoftteams.svg" alt="" />MS Teams</span>
+        <span class="tool"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/azuredevops.svg" alt="" />Azure DevOps</span>
+        <span class="tool"><img src="https://cdn.simpleicons.org/github/000000" alt="" />GitHub</span>
+      </div>
+    </div>
+
+    <div class="tool-group reveal">
+      <div class="tool-group-label">Landing Page &amp; Funnel</div>
+      <div class="tool-row">
+        <span class="tool"><img src="https://cdn.simpleicons.org/github/000000" alt="" />GitHub</span>
+        <span class="tool"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/visualstudiocode.svg" alt="" />VS Code</span>
+        <span class="tool"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/openai.svg" alt="" />ChatGPT</span>
+        <span class="tool"><img src="https://cdn.simpleicons.org/claude" alt="" />Claude Code</span>
+        <span class="tool"><img src="https://cdn.simpleicons.org/netlify" alt="" />Netlify</span>
+        <span class="tool"><img src="https://cdn.simpleicons.org/vercel/000000" alt="" />Vercel</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WORK ============ -->
+<section id="work">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Selected work</span>
+      <h2>Projects that shipped, grew, and converted</h2>
+      <p>A snapshot of recent engagements across QA, brand, and landing pages.</p>
+    </div>
+
+    <div class="filters reveal">
+      <button class="filter active" data-filter="all">All</button>
+      <button class="filter" data-filter="qa">QA &amp; PM</button>
+      <button class="filter" data-filter="social">Social Media</button>
+      <button class="filter" data-filter="brand">Brand</button>
+      <button class="filter" data-filter="landing">Landing Pages</button>
+    </div>
+
+    <div class="work-grid">
+      <div class="work work-qa" data-cat="qa">
+        <div class="work-caption">
+          <span class="tag">QA &amp; PM Toolkit</span>
+          <h4>Bug reports, test cases &amp; PM dashboards</h4>
+        </div>
+        <div class="qa-frame">
+          <div class="qa-slot"><img src="bug.png" alt="Bug report mockup" /></div>
+          <div class="qa-slot"><img src="PM.png" alt="PM dashboard mockup" /></div>
+          <div class="qa-slot"><img src="test case.png" alt="Test case mockup" /></div>
+        </div>
+      </div>
+      <div class="work work-social" data-cat="social">
+        <div class="work-caption">
+          <span class="tag">Social Media</span>
+          <h4>Instagram carousels &amp; single post designs</h4>
+        </div>
+        <div class="social-group">
+          <div class="social-sub">Lumière — Capsule Collection Carousel</div>
+          <div class="social-frame">
+            <div class="social-slot"><img src="11.png" alt="Lumière carousel slide 1" /></div>
+            <div class="social-slot"><img src="22.png" alt="Lumière carousel slide 2" /></div>
+            <div class="social-slot"><img src="33.png" alt="Lumière carousel slide 3" /></div>
+            <div class="social-slot"><img src="44.png" alt="Lumière carousel slide 4" /></div>
+          </div>
+        </div>
+        <div class="social-group">
+          <div class="social-sub">Luminae Studio — Single Instagram Posts</div>
+          <div class="social-frame">
+            <div class="social-slot"><img src="1s.png" alt="Luminae Studio post 1" /></div>
+            <div class="social-slot"><img src="2s.png" alt="Luminae Studio post 2" /></div>
+            <div class="social-slot"><img src="3s.png" alt="Luminae Studio post 3" /></div>
+            <div class="social-slot"><img src="4s.png" alt="Luminae Studio post 4" /></div>
+          </div>
+        </div>
+      </div>
+      <div class="work work-brand" data-cat="brand">
+        <div class="work-caption">
+          <span class="tag">Brand Kits</span>
+          <h4>Lumière · Morning Canopy · Maeven · Luminae Studio</h4>
+        </div>
+        <div class="brand-frame">
+          <div class="brand-slot"><img src="brandkit_1.png" alt="Lumière by Céline brand kit" /></div>
+          <div class="brand-slot"><img src="brandkit_2.png" alt="Morning Canopy brand kit" /></div>
+          <div class="brand-slot"><img src="brandkit_3.png" alt="Maeven Home &amp; Living brand kit" /></div>
+          <div class="brand-slot"><img src="brandkit_4.png" alt="Luminae Studio brand kit" /></div>
+        </div>
+      </div>
+      <div class="work work-landing" data-cat="landing">
+        <div class="work-caption">
+          <span class="tag">Landing Page &amp; Funnel</span>
+          <h4>Conversion-focused builds that launch and perform</h4>
+        </div>
+        <div class="landing-frame">
+          <div class="landing-slot">
+            <div class="browser-mock">
+              <div class="browser-bar">
+                <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+                <div class="url">maeven.co</div>
+              </div>
+              <video src="maeven%20web%20vid.mp4" autoplay muted loop playsinline></video>
+            </div>
+            <div class="landing-label"><strong>Maeven</strong> — Home &amp; Living</div>
+          </div>
+          <div class="landing-slot">
+            <div class="browser-mock">
+              <div class="browser-bar">
+                <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+                <div class="url">fueledwings.com</div>
+              </div>
+              <video src="fueled.mp4" autoplay muted loop playsinline></video>
+            </div>
+            <div class="landing-label"><strong>Fueled Wings</strong> — Unli-Wings Iloilo</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="work work-video" data-cat="social">
+        <div class="work-caption">
+          <span class="tag">Short-Form Video Editing</span>
+          <h4>Reels, TikToks &amp; YouTube Shorts — cut for attention and retention</h4>
+        </div>
+        <div class="video-frame">
+          <div>
+            <div class="phone-mock">
+              <video src="short1.mp4" autoplay muted loop playsinline poster="1s.png"></video>
+              <div class="sound-ind" aria-hidden="true">🔇</div>
+            </div>
+            <div class="video-label"><strong>Reel 01</strong><br/>Hook · Value · CTA</div>
+          </div>
+          <div>
+            <div class="phone-mock">
+              <video src="short2.mp4" autoplay muted loop playsinline poster="2s.png"></video>
+              <div class="sound-ind" aria-hidden="true">🔇</div>
+            </div>
+            <div class="video-label"><strong>Reel 02</strong><br/>Story-driven edit</div>
+          </div>
+          <div>
+            <div class="phone-mock">
+              <video src="short3.mp4" autoplay muted loop playsinline poster="3s.png"></video>
+              <div class="sound-ind" aria-hidden="true">🔇</div>
+            </div>
+            <div class="video-label"><strong>Reel 03</strong><br/>Trend-format content</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PLATFORMS ============ -->
+<section class="platforms-section">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Multi-platform</span>
+      <h2>Social media platforms I manage</h2>
+      <p>End-to-end content creation, community engagement, and performance tracking across every channel your audience uses.</p>
+    </div>
+    <div class="platforms-row reveal">
+      <div class="platform"><img src="https://cdn.simpleicons.org/facebook" alt="Facebook" /><span>Facebook</span></div>
+      <div class="platform"><img src="https://cdn.simpleicons.org/tiktok" alt="TikTok" /><span>TikTok</span></div>
+      <div class="platform"><img src="https://cdn.simpleicons.org/instagram" alt="Instagram" /><span>Instagram</span></div>
+      <div class="platform"><svg viewBox="0 0 24 24" width="44" height="44" fill="#0A66C2" aria-label="LinkedIn"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.852 3.37-1.852 3.601 0 4.267 2.37 4.267 5.455v6.288zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.063 2.063 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg><span>LinkedIn</span></div>
+      <div class="platform"><img src="https://cdn.simpleicons.org/threads" alt="Threads" /><span>Threads</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROCESS ============ -->
+<section id="process" class="process">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow" style="color:var(--accent-2)">How we work</span>
+      <h2>A simple process that keeps everything on track</h2>
+      <p>No mystery, no missed deadlines. Just clear communication and quality at every stage.</p>
+    </div>
+    <div class="process-grid">
+      <div class="step reveal"><div class="n">01</div><h4>Discovery</h4><p>We talk goals, audience, scope, and success metrics. You get a clear plan and timeline.</p></div>
+      <div class="step reveal"><div class="n">02</div><h4>Build &amp; Test</h4><p>Design, build, and QA in tight loops. You see progress weekly, not at the end.</p></div>
+      <div class="step reveal"><div class="n">03</div><h4>Launch</h4><p>Clean handoff, zero critical bugs, go-live support when it matters.</p></div>
+      <div class="step reveal"><div class="n">04</div><h4>Grow</h4><p>Post-launch tracking, iteration, and optimization to keep results climbing.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CERTIFICATES ============ -->
+<section>
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Credentials</span>
+      <h2>Continuously learning, certifiably.</h2>
+      <p>Recent training and conference attendance that sharpens my craft.</p>
+    </div>
+    <div class="certs-grid">
+      <div class="cert reveal">
+        <div class="seal">SA</div>
+        <div>
+          <h4>Social Media Management — Certificate of Completion</h4>
+          <p>The Social Arm · 8-hour course covering growth strategy, content creation, graphic design, and hashtag research. April 2026.</p>
+        </div>
+      </div>
+      <div class="cert reveal">
+        <div class="seal">UX</div>
+        <div>
+          <h4>UX+ 2025 Conference — Certificate of Attendance</h4>
+          <p>SMX Convention Center, Pasay City · "The Biggest UX Event in Asia." September 2025.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact" class="contact">
+  <div class="container contact-grid">
+    <div class="reveal">
+      <span class="eyebrow" style="color:#fff">Let's talk</span>
+      <h2>Let's work together.</h2>
+      <p class="lede">Whether you need a QA partner, a project manager who actually ships, or a landing page that converts — I'd love to hear about your project.</p>
+      <div class="contact-info">
+        <a href="mailto:manabathaidee07@gmail.com">
+          <span class="ico">@</span>
+          <div>
+            <div style="font-size:.78rem;opacity:.8;letter-spacing:.1em;text-transform:uppercase">Email</div>
+            <div>manabathaidee07@gmail.com</div>
+          </div>
+        </a>
+        <a href="https://instagram.com/haideemanabat" target="_blank" rel="noopener">
+          <span class="ico">IG</span>
+          <div>
+            <div style="font-size:.78rem;opacity:.8;letter-spacing:.1em;text-transform:uppercase">Instagram</div>
+            <div>@haideemanabat</div>
+          </div>
+        </a>
+        <a href="https://linkedin.com/in/haideemanabat" target="_blank" rel="noopener">
+          <span class="ico">in</span>
+          <div>
+            <div style="font-size:.78rem;opacity:.8;letter-spacing:.1em;text-transform:uppercase">LinkedIn</div>
+            <div>Haidee Manabat</div>
+          </div>
+        </a>
+      </div>
+    </div>
+    <form class="form-card reveal" onsubmit="sendInquiry(event)">
+      <h3>Start a project</h3>
+      <p>Tell me a bit about what you need. I reply within one business day.</p>
+      <div class="field"><label>Your name</label><input name="name" required placeholder="Jane Doe" /></div>
+      <div class="field"><label>Email</label><input type="email" name="email" required placeholder="you@company.com" /></div>
+      <div class="field"><label>What do you need?</label>
+        <select name="service">
+          <option>Software QA &amp; Project Management</option>
+          <option>Social Media Management</option>
+          <option>Landing Page &amp; Funnel Build</option>
+          <option>Not sure yet — let's chat</option>
+        </select>
+      </div>
+      <div class="field"><label>Tell me about your project</label><textarea name="message" required placeholder="Goals, timeline, anything relevant…"></textarea></div>
+      <button type="submit" class="btn btn-primary">Send inquiry →</button>
+    </form>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand"><span class="brand"><span class="mark">H</span></span> Haidee Manabat</div>
+        <p>Senior Manual QA Tester, Project Manager, and Landing Page &amp; Funnel Builder. Based in the Philippines — working with clients worldwide.</p>
+        <p style="color:#8A7462;font-size:.85rem">Your quality eye. Your project backbone. Your digital growth partner.</p>
+      </div>
+      <div>
+        <h5>Services</h5>
+        <ul>
+          <li><a href="#services">QA &amp; Project Management</a></li>
+          <li><a href="#services">Social Media Management</a></li>
+          <li><a href="#services">Landing Pages &amp; Funnels</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Quick links</h5>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#process">Process</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <div>© 2026 Haidee Manabat. All rights reserved.</div>
+      <div class="foot-socials">
+        <a href="https://instagram.com/haideemanabat" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
+        <a href="https://facebook.com/haideemanabat" target="_blank" rel="noopener" aria-label="Facebook">f</a>
+        <a href="https://linkedin.com/in/haideemanabat" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+        <a href="https://twitter.com/haideemanabat" target="_blank" rel="noopener" aria-label="Twitter">X</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Scroll reveal
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  },{threshold:.14});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+  // Portfolio filter
+  document.querySelectorAll('.filter').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      document.querySelectorAll('.filter').forEach(b=>b.classList.remove('active'));
+      btn.classList.add('active');
+      const f = btn.dataset.filter;
+      document.querySelectorAll('.work').forEach(w=>{
+        w.style.display = (f==='all'||w.dataset.cat===f) ? '' : 'none';
+      });
+    });
+  });
+
+  // Contact form → mailto fallback
+  function sendInquiry(e){
+    e.preventDefault();
+    const f = e.target;
+    const subject = encodeURIComponent("New project inquiry — " + f.service.value);
+    const body = encodeURIComponent(
+      "Name: " + f.name.value + "\n" +
+      "Email: " + f.email.value + "\n" +
+      "Service: " + f.service.value + "\n\n" +
+      f.message.value
+    );
+    window.location.href = "mailto:manabathaidee07@gmail.com?subject=" + subject + "&body=" + body;
+  }
+
+  // Click-to-unmute for video mockups. Only one video unmuted at a time.
+  document.querySelectorAll('.phone-mock video, .browser-mock video').forEach(v=>{
+    v.addEventListener('click', ()=>{
+      const wasMuted = v.muted;
+      // mute all others
+      document.querySelectorAll('.phone-mock video, .browser-mock video').forEach(o=>{
+        o.muted = true;
+        const host = o.closest('.phone-mock');
+        if(host) host.classList.remove('unmuted');
+        const ind = host && host.querySelector('.sound-ind');
+        if(ind) ind.textContent='🔇';
+      });
+      if(wasMuted){
+        v.muted = false;
+        v.play();
+        const host = v.closest('.phone-mock');
+        if(host){
+          host.classList.add('unmuted');
+          const ind = host.querySelector('.sound-ind');
+          if(ind) ind.textContent='🔊';
+        }
+      }
+    });
+  });
+
+  // Close mobile menu when link tapped
+  document.querySelectorAll('#navLinks a').forEach(a=>a.addEventListener('click',()=>{
+    document.getElementById('navLinks').classList.remove('open');
+  }));
+</script>
+</body>
+</html>
