@@ -398,6 +398,20 @@
     font-family:'Inter',sans-serif;text-align:center;letter-spacing:.02em;
   }
   .browser-mock video{width:100%;height:auto;display:block;background:#000}
+  .browser-mock iframe{width:100%;height:320px;display:block;border:0;background:#f5f5f5}
+  .iframe-wrap{position:relative}
+  .scroll-hint{
+    position:absolute;bottom:0;left:0;right:0;
+    display:flex;flex-direction:column;align-items:center;gap:4px;
+    padding:18px 0 12px;
+    background:linear-gradient(transparent, rgba(255,255,255,.92));
+    pointer-events:none;z-index:2;
+    transition:opacity .3s ease;
+  }
+  .scroll-hint span{font-size:.72rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+  .scroll-hint svg{animation:scrollbounce 1.4s ease-in-out infinite}
+  @keyframes scrollbounce{0%,100%{transform:translateY(0)}50%{transform:translateY(5px)}}
+  .iframe-wrap:hover .scroll-hint{opacity:0}
   .landing-label{
     font-size:.95rem;color:var(--ink-soft);font-weight:500;padding:0 4px;line-height:1.4;
   }
@@ -627,7 +641,7 @@
 
   <div class="container">
     <div class="stats reveal" style="margin-top:56px">
-      <div class="stat"><div class="n">5+</div><div class="l">Years in QA &amp; delivery</div></div>
+      <div class="stat"><div class="n">8+</div><div class="l">Years in QA &amp; delivery</div></div>
       <div class="stat"><div class="n">30+</div><div class="l">Projects shipped</div></div>
       <div class="stat"><div class="n">5</div><div class="l">Social platforms managed</div></div>
       <div class="stat"><div class="n">100%</div><div class="l">Client satisfaction</div></div>
@@ -709,7 +723,7 @@
 
       <div class="service reveal">
         <div class="num">03 / Conversion</div>
-        <h3>Landing Page &amp; Funnel Builder</h3>
+        <h3>Landing Page &amp; Funnel Builder · Website Designer</h3>
         <p class="lede">From concept to launch — I design and build landing pages and sales funnels that look great and actually convert.</p>
         <ul>
           <li>Landing page design &amp; development</li>
@@ -719,6 +733,7 @@
           <li>Mobile-responsive design</li>
           <li>Clean, hand-coded builds</li>
           <li>Funnel setup &amp; launch</li>
+          <li>Web design &amp; UI layout</li>
           <li>Performance tracking &amp; post-launch support</li>
         </ul>
         <a href="#contact" class="btn btn-primary">Get started</a>
@@ -829,10 +844,10 @@
         <div class="social-group">
           <div class="social-sub">Luminae Studio — Single Instagram Posts</div>
           <div class="social-frame">
-            <div class="social-slot"><img src="1s.png" alt="Luminae Studio post 1" /></div>
-            <div class="social-slot"><img src="2s.png" alt="Luminae Studio post 2" /></div>
-            <div class="social-slot"><img src="3s.png" alt="Luminae Studio post 3" /></div>
-            <div class="social-slot"><img src="4s.png" alt="Luminae Studio post 4" /></div>
+            <div class="social-slot"><img src="luminae_single/1s.png" alt="Luminae Studio post 1" /></div>
+            <div class="social-slot"><img src="luminae_single/2s.png" alt="Luminae Studio post 2" /></div>
+            <div class="social-slot"><img src="luminae_single/3s.png" alt="Luminae Studio post 3" /></div>
+            <div class="social-slot"><img src="luminae_single/4s.png" alt="Luminae Studio post 4" /></div>
           </div>
         </div>
       </div>
@@ -848,35 +863,6 @@
           <div class="brand-slot"><img src="brandkit_4.png" alt="Luminae Studio brand kit" /></div>
         </div>
       </div>
-      <div class="work work-landing" data-cat="landing">
-        <div class="work-caption">
-          <span class="tag">Landing Page &amp; Funnel</span>
-          <h4>Conversion-focused builds that launch and perform</h4>
-        </div>
-        <div class="landing-frame">
-          <div class="landing-slot">
-            <div class="browser-mock">
-              <div class="browser-bar">
-                <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
-                <div class="url">maeven.co</div>
-              </div>
-              <video src="maeven%20web%20vid.mp4" autoplay muted loop playsinline></video>
-            </div>
-            <div class="landing-label"><strong>Maeven</strong> — Home &amp; Living</div>
-          </div>
-          <div class="landing-slot">
-            <div class="browser-mock">
-              <div class="browser-bar">
-                <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
-                <div class="url">fueledwings.com</div>
-              </div>
-              <video src="fueled.mp4" autoplay muted loop playsinline></video>
-            </div>
-            <div class="landing-label"><strong>Fueled Wings</strong> — Unli-Wings Iloilo</div>
-          </div>
-        </div>
-      </div>
-
       <div class="work work-video" data-cat="social">
         <div class="work-caption">
           <span class="tag">Short-Form Video Editing</span>
@@ -903,6 +889,76 @@
               <div class="sound-ind" aria-hidden="true">🔇</div>
             </div>
             <div class="video-label"><strong>Reel 03</strong><br/>Trend-format content</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="work work-landing" data-cat="landing">
+        <div class="work-caption">
+          <span class="tag">Websites · Landing Pages · Funnels</span>
+          <h4>Conversion-focused builds that launch and perform</h4>
+        </div>
+        <div class="landing-frame">
+          <div class="landing-slot">
+            <div class="browser-mock">
+              <div class="browser-bar">
+                <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+                <div class="url">maeven.co</div>
+              </div>
+              <video src="maeven%20web%20vid.mp4" autoplay muted loop playsinline></video>
+            </div>
+            <div class="landing-label"><strong>Maeven</strong> — Home &amp; Living</div>
+          </div>
+          <div class="landing-slot">
+            <div class="browser-mock">
+              <div class="browser-bar">
+                <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+                <div class="url">fueledwings.com</div>
+              </div>
+              <video src="fueled.mp4" autoplay muted loop playsinline></video>
+            </div>
+            <div class="landing-label"><strong>Fueled Wings</strong> — Unli-Wings Iloilo</div>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:28px;align-items:start">
+          <div class="landing-slot">
+            <div class="browser-mock">
+              <div class="browser-bar">
+                <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+                <div class="url">bloosom-salon.pages.dev</div>
+              </div>
+              <div class="iframe-wrap">
+                <iframe src="https://bloosom-salon.pages.dev/" loading="lazy" title="Bloosom Salon"></iframe>
+                <div class="scroll-hint"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--muted)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg><span>Scroll</span></div>
+              </div>
+            </div>
+            <div class="landing-label"><strong>Bloosom Salon</strong> — Beauty &amp; Hair</div>
+          </div>
+          <div class="landing-slot">
+            <div class="browser-mock">
+              <div class="browser-bar">
+                <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+                <div class="url">ember-oak-4rx.pages.dev</div>
+              </div>
+              <div class="iframe-wrap">
+                <iframe src="https://ember-oak-4rx.pages.dev/" loading="lazy" title="Ember &amp; Oak"></iframe>
+                <div class="scroll-hint"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--muted)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg><span>Scroll</span></div>
+              </div>
+            </div>
+            <div class="landing-label"><strong>Ember &amp; Oak</strong> — Dining &amp; Bar</div>
+          </div>
+          <div class="landing-slot">
+            <div class="browser-mock">
+              <div class="browser-bar">
+                <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+                <div class="url">whataboutcoffee.pages.dev</div>
+              </div>
+              <div class="iframe-wrap">
+                <iframe src="https://whataboutcoffee.pages.dev/" loading="lazy" title="What About Coffee"></iframe>
+                <div class="scroll-hint"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--muted)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg><span>Scroll</span></div>
+              </div>
+            </div>
+            <div class="landing-label"><strong>What About Coffee</strong> — Coffee Shop</div>
           </div>
         </div>
       </div>
